@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        <title>Victor's Uob Life 2019</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/victor.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            
+            <h1><a href="/">Victor's Uob Life 2019</a></h1>
+        </div>
+        
+        
+        <div class="row">
+            
+            
+            <div class="column left">
+                <h1>Article Page</h1>
+                <h1>
+                    {% block content %}
+                    {% endblock %}
+                </h1> 
+                 
+            
+            </div>
+      
+            
+            
+            <div class="column right">
+                {% load static %}
+                    <h2>Lifeshoots Highlights</h2>
+                    <img src="{% static 'image/uob.jpg' %}" width="260" height="250">
+                    <br>
+                    <img src="{% static 'image/a.jpg' %}" width="260" height="250">
+                    <br>
+                    <img src="{% static 'image/b.jpg' %}" width="260" height="250">
+            </div>
+            
+        
+        </div>
+        
+        <div class="page-footer">
+            <h1>Made by Victor Fang</h1> 
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+        </div>
+       
+       
+    </body>
+</html>

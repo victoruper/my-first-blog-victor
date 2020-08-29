@@ -36,25 +36,23 @@ body {
     text-decoration: none;
     text-align: center
 }
-/* 创建三个相等的列 */
+
 .column {
     float: left;
     height: 1000px;
   }
    
-  /* 左右侧栏的宽度 */
-  .column.left {
+
+.column.left {
     width: 30%;
     text-align: center;
-    /* border-right-style:solid;
-    border-width:1px; */
+   
   }
  
-  /* 中间列宽度 */
-  .column.right {
+ 
+.column.right {
     width: 70%;
     text-align: center;
-    /* border-left-style:solid;
-    border-width:1px; */
+   
   }
    
